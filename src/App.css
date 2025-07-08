@@ -23,6 +23,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
 }
 
 .app {
@@ -62,7 +63,6 @@ body {
   grid-template-columns: 4.8rem 1fr auto;
   align-items: center;
   column-gap: 1.6rem;
-
   padding: 1.2rem;
   border-radius: 7px;
   transition: 0.5s;
@@ -112,7 +112,6 @@ form {
   display: grid;
   align-items: center;
   gap: 1.2rem;
-
   background-color: var(--color-lightest);
   border-radius: 7px;
 }
@@ -122,6 +121,7 @@ form {
   margin-bottom: 1.6rem;
   padding: 1.2rem;
 }
+
 .form-split-bill {
   grid-template-columns: 1fr 12rem;
   padding: 3.2rem 4rem;
@@ -166,4 +166,45 @@ form h2 {
   text-transform: uppercase;
   letter-spacing: -0.5px;
   margin-bottom: 1.6rem;
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+  .app {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+
+  .sidebar > .button {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+  }
+
+  .form-add-friend,
+  .form-split-bill {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  form .button {
+    grid-column: 1;
+  }
+
+  form h2 {
+    text-align: center;
+  }
+
+  .sidebar li {
+    grid-template-columns: 3.5rem 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 0.4rem;
+  }
+
+  .sidebar li .button {
+    grid-row: 3;
+    grid-column: 1 / -1;
+    justify-self: flex-start;
+  }
 }
