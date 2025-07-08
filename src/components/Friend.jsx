@@ -11,13 +11,13 @@ export function Friend({ friend, onSelection, selectedFriend }) {
 
       {friend.balance < 0 && (
         <p className="red">
-          you owe {friend.name} {Math.abs(friend.balance)}$
+          you owe {friend.name} Rs. {Math.abs(friend.balance)}
         </p>
       )}
 
       {friend.balance > 0 && (
         <p className="green">
-          {friend.name} owes you {friend.balance}$
+          {friend.name} owes you Rs.{friend.balance}
         </p>
       )}
 
