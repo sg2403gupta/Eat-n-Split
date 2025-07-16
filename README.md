@@ -1,3 +1,5 @@
+Project Link: https://sg2403gupta.github.io/Eat-n-Split/
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
